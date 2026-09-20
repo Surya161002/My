@@ -1,0 +1,26 @@
+I have attached my current Jenkins Pipeline code.
+
+I am getting the Groovy/Jenkins error:
+`script method is too long` / `Method code too large`.
+
+Please refactor my existing Jenkins code into multiple `.groovy` files to solve the method-size limitation.
+
+Important requirements:
+
+1. Preserve my existing pipeline functionality, stage order, commands, paths, SVN logic, LDRA logic, email logic, target connection logic, and existing behaviour.
+2. Do NOT redesign the pipeline unnecessarily.
+3. Do NOT add a separate stage such as:
+   `stage('Load Pipeline Modules')`
+4. The modular Groovy files should be loaded without creating a visible Jenkins stage for loading them.
+5. Keep the main `Jenkinsfile` as the pipeline orchestrator.
+6. Split the large logic into suitable `.groovy` files based on functionality/stages.
+7. Make sure variables/state can still be shared correctly between the Jenkinsfile and the separate Groovy files.
+8. The resulting code must be valid Jenkins Declarative Pipeline/Groovy syntax.
+9. Do not remove any existing functionality just to reduce the code size.
+10. If a new requirement is added later, I should be able to modify one relevant `.groovy` file instead of making the Jenkinsfile huge.
+11. Create the complete folder structure and give me ALL required `.groovy` files plus the final `Jenkinsfile`.
+12. Package all the files into ONE ZIP file that I can download and copy to my office PC.
+13. Also give me the exact SVN folder structure where each file should be placed.
+
+Most importantly, do not give me only examples or partial code. I need the complete working files based on my attached Jenkins code.
+
